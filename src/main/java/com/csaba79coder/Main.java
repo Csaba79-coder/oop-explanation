@@ -1,5 +1,6 @@
 package com.csaba79coder;
 
+import com.csaba79coder.model.Address;
 import com.csaba79coder.model.Person;
 import com.csaba79coder.util.Printer;
 
@@ -25,5 +26,8 @@ public class Main {
         Printer.print(helloDenes);
         int numberFromPrinter = Printer.number;
         Printer.print("Number: " + numberFromPrinter);
+        Address address = new Address("15600 Mulholland Drive", "Los Angeles", "CA", "90077-1599");
+        gabor.setAddress(address);
+        Printer.print(gabor.getAddress().toString());
     }
 }

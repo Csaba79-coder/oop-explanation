@@ -4,6 +4,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
+    private Address address; // ezt a kapcsoatot utólag adtam hozzá
 
     // Üres konstruktor
     public Person() {
@@ -48,6 +49,14 @@ public class Person {
     // Setter
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
