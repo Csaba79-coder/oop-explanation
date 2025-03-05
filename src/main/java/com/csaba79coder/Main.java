@@ -1,5 +1,7 @@
 package com.csaba79coder;
 
+import com.csaba79coder.interitance.Animal;
+import com.csaba79coder.interitance.Dog;
 import com.csaba79coder.model.Address;
 import com.csaba79coder.model.Person;
 import com.csaba79coder.util.Printer;
@@ -29,5 +31,28 @@ public class Main {
         Address address = new Address("15600 Mulholland Drive", "Los Angeles", "CA", "90077-1599");
         gabor.setAddress(address);
         Printer.print(gabor.getAddress().toString());
+
+        System.out.println("---------------");
+        Animal animal = new Animal(10);
+        System.out.println(animal);
+        animal.makeNoise();
+
+        Dog dog = new Dog("male");
+        dog.setAge(2);
+        System.out.println(dog);
+        dog.makeNoise();
+
+        System.out.println("--------------------------");
+
+        Animal animal2 = new Dog("female");
+        System.out.println(animal2);
+        animal2.makeNoise();
+        animal2.setAge(3);
+        System.out.println(animal2);
+
+        System.out.println("--------------------------");
+        Animal animal3 = new Dog();
+        animal3.setAge(1); // DEEE NEM tudok beállitani gendert!
+        System.out.println(animal3);
     }
 }
